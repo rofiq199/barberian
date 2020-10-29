@@ -11,7 +11,6 @@ class Auth extends CI_Controller
 
     public function index()
     {
-        echo 'hai';
         $this->load->view('login');
     }
     function proses_login()

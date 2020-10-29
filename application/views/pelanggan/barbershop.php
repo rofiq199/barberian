@@ -17,7 +17,7 @@
 
     <section class="inner-page">
       <div class="container">
-      <div class="card col-12 col-md-12">
+      <div class="card col-12 col-md-4">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
