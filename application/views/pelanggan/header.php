@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Delicious Bootstrap Template - Index</title>
+  <title>Inner Page - Delicious Bootstrap Template</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -37,16 +37,9 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent">
-    <div class="container text-right">
-      <i class="icofont-phone"></i> +1 5589 55488 55
-      <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM
-    </div>
-  </section>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -58,15 +51,11 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#specials">Specials</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#why-us">Fitur Kami</a></li>
+          <li><a href="#gallery">Katalog</a></li>
+          <li><a href="#contact">Cari Barbershop</a></li>
 
-          <li class="book-a-table text-center"><a href="#book-a-table">Book a table</a></li>
+          <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

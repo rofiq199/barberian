@@ -6,9 +6,7 @@ class Home extends CI_Controller{
     }
 
     function index(){
-        $this->load->view('pelanggan/header');
         $this->load->view('pelanggan/index');
-        $this->load->view('pelanggan/footer');
     }
 }
 
