@@ -1,6 +1,6 @@
 <?php
 
-class Produk extends CI_Controller
+class Barber extends CI_Controller
 {
     public function __construct()
     {
@@ -10,10 +10,10 @@ class Produk extends CI_Controller
     public function index()
     {
         $username = ['username_bs' => $this->session->userdata('username')];
-        $data['produk'] = $this->M_user->getwhere('produk', $username);
+        $data['barber'] = $this->M_user->getwhere('data_barberman', $username);
         $this->load->view('admin/header');
         $this->load->view('admin/sidebar');
-        $this->load->view('admin/produk', $data);
+        $this->load->view('admin/barber', $data);
         $this->load->view('admin/footer');
     }
     function add()

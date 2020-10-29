@@ -25,14 +25,25 @@ class Auth extends CI_Controller
         $cekbarbershop = $this->M_auth->ceklogin('data_barber', $barbershop)->num_rows();
         if ($cekcostumer > 0) {
             $datacustomer = $this->M_auth->ceklogin('data_customer', $customer)->result_array();
-            print_r($datacustomer);
-            echo 'halo';
+            $data_session = array(
+                'username' => $datacustomer[0]['username_cs']
+            );
+            $this->session->set_userdata($data_session);
+            redirect(base_url('pelanggan/home'));
         } elseif ($cekbarber > 0) {
             $databarber = $this->M_auth->ceklogin('data_barberman', $barber)->result_array();
-            print_r($databarber);
+            $data_session = array(
+                'username' => $databarber[0]['username_bm']
+            );
+            $this->session->set_userdata($data_session);
+            redirect(base_url('pelanggan/home'));
         } elseif ($cekbarbershop > 0) {
-            $databarber = $this->M_auth->ceklogin('data_barber', $barbershop)->result_array();
-            print_r($databarber);
+            $databarbershop = $this->M_auth->ceklogin('data_barber', $barbershop)->result_array();
+            $data_session = array(
+                'username' => $databarbershop[0]['username_bs']
+            );
+            $this->session->set_userdata($data_session);
+            redirect(base_url('admin/dashboard'));
         }
     }
     function register()
