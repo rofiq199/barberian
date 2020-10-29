@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends CI_Controller
+class Produk extends CI_Controller
 {
     public function __construct()
     {
@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller
     {
         $this->load->view('admin/header');
         $this->load->view('admin/sidebar');
-        $this->load->view('admin/dashboard');
+        $this->load->view('admin/produk');
         $this->load->view('admin/footer');
     }
 }
