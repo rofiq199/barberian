@@ -1,0 +1,29 @@
+.navbar{
+    background-color: black;
+}
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: white !important;
+}
+.nav-link{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 20px;
+    color: white !important;
+    margin-right: 20px;
+}
+
+.dropdown-menu{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.dropdown-item{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.dropdown-item:hover{
+    content: '';
+    display: block;
+    background-color: whitesmoke;
+}

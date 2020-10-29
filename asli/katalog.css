@@ -1,0 +1,80 @@
+.navbar{
+    background-color: #323131;
+}
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: white !important;
+}
+.nav-link{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    margin-right: 27px;
+    font-style: normal;
+    color: white !important;
+}
+
+.dropdown-menu{
+    background-color: #323131;
+}
+.dropdown-item{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white !important;
+}
+.dropdown-item:hover{
+    content: '';
+    display: block;
+    background: black;
+}
+.display-4{
+    color: white !important;
+    font-family: Haettenschweiler;
+    font-size: 32px;
+    text-align: center;
+}
+.nav-link:hover{
+    content: '';
+    display: block;
+    background: black;
+}
+.katalog{
+    border-bottom: 8px solid white;
+}
+body{
+    background-color: #B0AAA9;
+}
+img{
+    width: 150px;
+    height: 160px;
+}
+#popup{
+background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+background-size: cover;
+    
+}
+    /* akhir */
+#popupp{
+    background-image: url('nyoba_tok.jpg');
+    background-size: cover;
+}
+    /* akhir */
+#popuppp{
+    background-image: url('iki_nyobak.jpg');
+    background-size: cover;
+} 
+
+@media (min-width: 992px) { 
+    .navbar-brand{
+        font-size: 32px;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .display-4{
+        font-size: 62px;
+    }
+    img{
+        width: 300px;
+        height: 310px;
+    }
+ }  

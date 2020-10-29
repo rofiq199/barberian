@@ -1,0 +1,62 @@
+/* Navbar */
+.navbar{
+    background-color: #323131;
+    opacity: 100%;
+}
+.navbar-brand{
+    font-family: Viga;
+    font-size: 32px;
+    color: white !important;
+}
+.nav-link{
+    font-family: 'Titillium Web';
+    font-size: 20px;
+    margin-right: 27px;
+    font-style: normal;
+    color: white !important;
+}
+.nav-link:hover{
+        content: '';
+        display: block;
+        background: black;
+    
+}
+
+/* akhir Navbar */
+
+
+.barber{
+    color: black;
+}
+
+.card{
+    background-color: transparent;
+}
+
+body{
+    background-color:  white;
+}
+#popup{
+    background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+    background-size: cover;
+    
+}
+.input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    }
+    .input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    }
+    .input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid #ef9a9a;
+    }
+    .input-group.md-form.form-sm.form-2 input.lime-border {
+    border: 1px solid #cddc39;
+    }
+    .input-group.md-form.form-sm.form-2 input.amber-border {
+    border: 1px solid #ffca28;
+    }

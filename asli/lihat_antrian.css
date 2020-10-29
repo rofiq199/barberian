@@ -1,0 +1,20 @@
+
+form{
+    font-family: Viga;
+    position :relative;
+}
+
+#popup{
+    background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+    background-size: cover;
+    
+    }
+    #popupp{
+        background-image: url('nyoba_tok.jpg');
+        background-size: cover;
+    }
+    /* akhir */
+    #popuppp{
+        background-image: url('iki_nyobak.jpg');
+        background-size: cover;
+    }   

@@ -1,0 +1,24 @@
+
+.fas {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+  #popup{
+    background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+    background-size: cover;
+    
+    }
+    /* akhir */
+    #popupp{
+        background-image: url('nyoba_tok.jpg');
+        background-size: cover;
+    }
+    /* akhir */
+    #popuppp{
+        background-image: url('iki_nyobak.jpg');
+        background-size: cover;
+    } 
+.add{
+    width: 300px;
+}

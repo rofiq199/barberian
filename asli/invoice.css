@@ -1,0 +1,45 @@
+.card-text{
+    margin-right: 2px;
+    color: grey;
+}
+
+.border-bottom{
+    color: grey;
+    margin-top: 20px;
+}
+
+.produk{
+    margin-top: -10px;
+    color: black;
+}
+
+.tanggal{
+    color: black;
+}
+
+.detil{
+    margin-top: -10px;
+}
+
+.harga{
+    color: green;
+}
+
+.transaksi-sukses{
+    margin-top: -10px;
+    color: green;
+}
+
+.transaksi-gagal{
+    margin-top: -10px;
+    color: red;
+}
+.verifikasi{
+    margin-top: -10px;
+    color: blue;
+}
+
+.add{
+    margin-top: 10px;
+    width: 22rem;
+}

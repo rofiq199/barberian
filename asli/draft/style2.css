@@ -1,0 +1,9 @@
+.form-control{
+    /*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 30%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 10px;
+
+}

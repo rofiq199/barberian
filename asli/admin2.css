@@ -1,0 +1,15 @@
+.nav-link:hover {
+    background-color: grey;
+}
+
+.card-text{
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.nav{
+    height: 950px;
+}

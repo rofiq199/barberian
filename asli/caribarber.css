@@ -1,0 +1,36 @@
+/* Navbar */
+
+/* akhir Navbar */
+img{
+    width: 1000px;
+    height: 10px;
+}
+
+.card{
+    background-color: transparent;
+    font-family: 'Titillium Web';
+    font-size: 16px;
+}
+
+#popup{
+    background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+    background-size: cover;
+    
+}
+
+.border{
+    margin-top: 20px;
+    background-color:black ;
+}
+.status{
+    border: gray;
+}
+ 
+
+@media (min-width: 992px) {
+    
+    img{
+        width: 1080px;
+    }
+     
+} 

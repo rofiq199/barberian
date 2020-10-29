@@ -1,0 +1,116 @@
+.navbar-brand{
+    font-family: Viga;
+    font-size: 32px;
+    color: white !important;
+}
+.navbar{
+    position: relative;
+    z-index: 1;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.example-static {
+    padding: 2rem 0;
+    font-size: 14px;
+    background: #fbfbfb;
+    border: 1px dashed #dcd9d9;
+  }
+.fas{
+    color: white;
+}
+/* akhir Jumbotron */
+/* WorkingSpace */
+.tentangkami{
+    font-family: Haettenschweiler;
+    text-align: center;
+}
+/* akhir WorkingSpace */
+@media (min-width : 992px){
+    .nav-link{
+        font-family: 'Titillium Web';
+        font-size: 20px;
+        margin-right: 27px;
+        font-style: normal;
+        color: white !important;
+    }
+    .nav-link:hover{
+        content: '';
+        display: block;
+        background: black;
+    }
+    .jumbotron{
+        background-image: url(Background.jpg);
+        background-size: cover;
+        height: 617px;
+        margin-top: -70px;
+    }
+    .navbar{
+        background-color:  #323131;
+    }
+
+    .fitur{
+        color: black;
+        font-family: Viga;
+        margin-top: 30px;
+    }
+
+    form{
+        margin-top: 20px;
+    }
+
+    /* efek sticky */
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+    }
+    .visible-title {
+        visibility: visible;
+    }
+    /* akhir */
+    
+}
+
+/* akhir Navbar */
+
+
+.barber{
+    color: black;
+}
+
+.card{
+    background-color: transparent;
+}
+
+body{
+    background-color:  white;
+}
+#popup{
+    background-image: url('tim-mossholder-q49oU8NeOHQ-unsplash.jpg');
+    background-size: cover;
+    
+}
+
+form{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.garis{
+    border-bottom: 2px solid black;
+}
+    /* table{
+        display: none;
+    } */
+.fa-check{
+    color: green;
+}
+.fa-times{
+    color: red;
+}
