@@ -18,8 +18,8 @@ class M_user extends CI_Model
     {
         $this->db->update($tabel, $data, $where);
     }
-    function delete($tabel, $data)
+    function delete($tabel, $where)
     {
-        # code...
+        $this->db->delete($tabel, $where);
     }
 }

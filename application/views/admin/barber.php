@@ -46,13 +46,13 @@
                                 <?php foreach ($barber as $index => $a) { ?>
                                     <tr>
                                         <td><?= $index + 1; ?></td>
-                                        <td></td>
+                                        <td><img src="<?= base_url('img/') . $a->foto_bm ?>" style="max-width: 100px;" alt="" srcset=""></td>
                                         <td><?= $a->nama_bm ?></td>
                                         <td><?= $a->email_bm; ?></td>
                                         <td><?= $a->alamat_bm; ?></td>
                                         <td><?= $a->no_bm; ?></td>
                                         <td>
-                                            <a href="javascript:;" id="tomboledit"><i class="fas fa-edit"></i></a>
+                                            <a href="javascript:;" id="tomboledit" data-id='<?= $a->username_bm ?>'><i class="fas fa-edit"></i></a>
                                             <a href=""><i class="fas fa-times"></i></a>
                                         </td>
                                     </tr>
@@ -75,7 +75,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Username Barberman</label>
+                            <input type="text" class="form-control" required name="username" id="username" placeholder="Username Barberman">
+                        </div>
                         <div class="form-group">
                             <label class="font-weight-bold">Nama Barberman</label>
                             <input type="text" class="form-control" required name="nama" id="nama" placeholder="Nama Barberman">
@@ -92,9 +96,13 @@
                             <label class="font-weight-bold">No Hp</label>
                             <input type="text" class="form-control" required name="no" id="no" placeholder="No Hp Barberman">
                         </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">Foto</label>
+                            <input type="file" class="form-control" required name="foto" id="foto">
+                        </div>
 
                 </div>
-                <div class="modal-footer">
+                <div class=" modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" id="submit">Tambah</button>
                     </form>
@@ -105,12 +113,37 @@
     <script>
         $(document).ready(function() {
             $('#tambahbarber').click(function() {
+                $('form').attr('action', '<?= base_url('admin/barber/add') ?>');
                 $('#modal-title').empty();
                 $('#modal-title').append('Tambah Barber');
-                $('#submit').append('Edit');
+                $('#username').val('');
+                $('#nama').val('');
+                $('#email').val('');
+                $('#alamat').val('');
+                $('#no').val('');
             });
             $('#mydata tr').on('click', '#tomboledit', function() {
+                $('form').attr('action', '<?= base_url('admin/barber/update') ?>');
                 $('#modal').modal('show');
+                $('#modal-title').empty();
+                $('#modal-title').append('Edit Barber');
+                $('#submit').empty();
+                $('#submit').append('Edit');
+                var id = $(this).data('id');
+                $.ajax({
+                    url: "<?= base_url('admin/barber') ?>/getbarberman",
+                    dataType: "JSON",
+                    data: {
+                        id: id
+                    },
+                    success: function(data) {
+                        $('#username').val(data[0]['username_bm']);
+                        $('#nama').val(data[0]['nama_bm']);
+                        $('#email').val(data[0]['email_bm']);
+                        $('#alamat').val(data[0]['alamat_bm']);
+                        $('#no').val(data[0]['no_bm']);
+                    }
+                });
             })
         });
     </script>
