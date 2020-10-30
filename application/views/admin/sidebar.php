@@ -17,6 +17,10 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                         Barberman
                     </a>
+                    <a class="nav-link" href="<?= base_url('admin/profil') ?>">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                        Profil
+                    </a>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         Pages
