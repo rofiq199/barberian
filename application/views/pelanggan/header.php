@@ -15,6 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="<?= base_url('assets/Delicious/')?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/Delicious/')?>assets/css/style.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/')?>assets/css/mystyle.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Delicious - v2.1.0
@@ -48,14 +50,14 @@
         <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/')?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
-      <nav class="nav-menu d-none d-lg-block">
+      <nav class="nav-menu d-none d-lg-block fixed">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="#contact">Cari Barbershop</a></li>
 
-          <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+          <li class="book-a-table text-center"><a href="<?= base_url('auth')?>">Login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

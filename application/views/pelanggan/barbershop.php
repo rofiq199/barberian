@@ -17,14 +17,19 @@
 
     <section class="inner-page">
       <div class="container">
-      <div class="card col-12 col-md-4">
+      <div class="row">
+      <?php foreach($data_barber as $barber){?>
+      <div class="card col-12 col-md-5">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title"><?= $barber->nama_bs;?></h5>
+            <p class="card-text"><?= $barber->alamat_bs;?></p>
+            <p class="card-text">Jam Beroperasi : <?= $barber->jam_buka;?> - <?= $barber->jam_tutup;?></p>
+            <a href="<?= base_url('pelanggan/barbershop/detail_barber/'.$barber->username_bs)?>" class="btn text-center open-submit col-12 col-md-12">Buka Barber</a>
         </div>
         </div>
+        <?php } ?>
+      </div>
       </div>
     </section>
 

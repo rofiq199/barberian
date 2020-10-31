@@ -29,14 +29,14 @@ class Auth extends CI_Controller
                 'username' => $datacustomer[0]['username_cs']
             );
             $this->session->set_userdata($data_session);
-            redirect(base_url('pelanggan/home'));
+            redirect(base_url('pelanggan/barbershop'));
         } elseif ($cekbarber > 0) {
             $databarber = $this->M_auth->ceklogin('data_barberman', $barber)->result_array();
             $data_session = array(
                 'username' => $databarber[0]['username_bm']
             );
             $this->session->set_userdata($data_session);
-            redirect(base_url('pelanggan/home'));
+            redirect(base_url('pelanggan/barbershop'));
         } elseif ($cekbarbershop > 0) {
             $databarbershop = $this->M_auth->ceklogin('data_barber', $barbershop)->result_array();
             $data_session = array(
