@@ -53,7 +53,7 @@
                                         <td><?= $a->no_bm; ?></td>
                                         <td>
                                             <a href="javascript:;" id="tomboledit" data-id='<?= $a->username_bm ?>'><i class="fas fa-edit"></i></a>
-                                            <a href=""><i class="fas fa-times"></i></a>
+                                            <a href="<?= base_url('admin/barber/hapus') . $a->username_bm ?>"><i class="fas fa-times"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
