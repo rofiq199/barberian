@@ -10,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?= base_url('assets/Delicious/')?>assets/img/favicon.png" rel="icon">
-  <link href="<?= base_url('assets/Delicious/')?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/img/favicon.png" rel="icon">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/')?>assets/vendor/owl.carousel/<?= base_url('assets/Delicious/')?>assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/owl.carousel/<?= base_url('assets/Delicious/') ?>assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?= base_url('assets/Delicious/')?>assets/css/style.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Delicious - v2.1.0
@@ -44,7 +44,7 @@
       <div class="logo mr-auto">
         <h1 class="text-light"><a href="index.html"><span>Delicious</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/')?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/') ?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -53,15 +53,18 @@
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="#contact">Cari Barbershop</a></li>
-
-          <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+          <?php if ($this->session->userdata('username') != '') { ?>
+            <li class="book-a-table text-center"><a href="#book-a-table"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" class="img-circle" alt="" srcset=""><?= $this->session->userdata('username'); ?></a></li>
+          <?php } else { ?>
+            <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+          <?php } ?>
         </ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
-<!-- ======= Hero Section ======= -->
-<section id="hero">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -70,7 +73,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background: url(<?= base_url('assets/Delicious/')?>assets/img/slide/alat_potong.jpg);">
+          <div class="carousel-item active" style="background: url(<?= base_url('assets/Delicious/') ?>assets/img/slide/alat_potong.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Delicious</span> Restaurant</h2>
@@ -84,7 +87,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url(<?= base_url('assets/Delicious/')?>assets/img/slide/slide-2.jpg);">
+          <div class="carousel-item" style="background: url(<?= base_url('assets/Delicious/') ?>assets/img/slide/slide-2.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
@@ -98,8 +101,8 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url(<?= base_url('assets/Delicious/')?>assets/img/slide/slide-3.jpg);">
-            <div class="carousel-background"><img src="<?= base_url('assets/Delicious/')?>assets/img/slide/slide-3.jpg" alt=""></div>
+          <div class="carousel-item" style="background: url(<?= base_url('assets/Delicious/') ?>assets/img/slide/slide-3.jpg);">
+            <div class="carousel-background"><img src="<?= base_url('assets/Delicious/') ?>assets/img/slide/slide-3.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -234,64 +237,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/bald.png" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/bald.png" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/bald.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/bald.png" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/army.png" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/army.png" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/army.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/army.png" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/')?>assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -305,7 +308,7 @@
 
 
   <!-- ======= Footer ======= -->
-<footer id="footer">
+  <footer id="footer">
     <div class="container">
       <h3>Delicious</h3>
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
@@ -332,17 +335,17 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/php-email-form/validate.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/venobox/venobox.min.js"></script>
-  <script src="<?= base_url('assets/Delicious/')?>assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/venobox/venobox.min.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?= base_url('assets/Delicious/')?>assets/js/main.js"></script>
+  <script src="<?= base_url('assets/Delicious/') ?>assets/js/main.js"></script>
 
 </body>
 
