@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">
+                    <a class="nav-link" href="<?= base_url('barberman/dashboard') ?>">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
@@ -17,7 +17,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                         Barberman
                     </a>
-                    <a class="nav-link" href="<?= base_url('admin/profil') ?>">
+                    <a class="nav-link" href="<?= base_url('barberman/profil') ?>">
                         <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                         Profil
                     </a>

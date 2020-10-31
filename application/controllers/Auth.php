@@ -26,21 +26,24 @@ class Auth extends CI_Controller
         if ($cekcostumer > 0) {
             $datacustomer = $this->M_auth->ceklogin('data_customer', $customer)->result_array();
             $data_session = array(
-                'username' => $datacustomer[0]['username_cs']
+                'username' => $datacustomer[0]['username_cs'],
+                'foto' => $datacustomer[0]['foto_cs']
             );
             $this->session->set_userdata($data_session);
             redirect(base_url('pelanggan/barbershop'));
         } elseif ($cekbarber > 0) {
             $databarber = $this->M_auth->ceklogin('data_barberman', $barber)->result_array();
             $data_session = array(
-                'username' => $databarber[0]['username_bm']
+                'username' => $databarber[0]['username_bm'],
+                'foto' => $databarber[0]['foto_bm']
             );
             $this->session->set_userdata($data_session);
-            redirect(base_url('pelanggan/barbershop'));
+            redirect(base_url('barberman/dashboard'));
         } elseif ($cekbarbershop > 0) {
             $databarbershop = $this->M_auth->ceklogin('data_barber', $barbershop)->result_array();
             $data_session = array(
-                'username' => $databarbershop[0]['username_bs']
+                'username' => $databarbershop[0]['username_bs'],
+                'foto' => $databarbershop[0]['foto']
             );
             $this->session->set_userdata($data_session);
             redirect(base_url('admin/dashboard'));
@@ -65,5 +68,10 @@ class Auth extends CI_Controller
             'password_cs' => $password
         ];
         $this->M_auth->register('data_customer', $data);
+    }
+    function logout()
+    {
+        $this->session->sess_destroy();
+        redirect(base_url('auth/'));
     }
 }
