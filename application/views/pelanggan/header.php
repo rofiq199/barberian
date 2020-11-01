@@ -52,7 +52,7 @@
 
       <nav class="nav-menu d-none d-lg-block fixed">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="#contact">Cari Barbershop</a></li>
