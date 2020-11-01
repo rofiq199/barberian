@@ -29,10 +29,5 @@ class Barbershop extends CI_Controller
         $this->load->view('pelanggan/footer');
     }
 
-    function profil()
-    {
-        $this->load->view('pelanggan/header');
-        $this->load->view('pelanggan/profil');
-        $this->load->view('pelanggan/footer');
-    }
+    
 }
