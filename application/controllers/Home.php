@@ -1,6 +1,6 @@
 <?php
 
-class Barbershop extends CI_Controller
+class Home extends CI_Controller
 {
     public function __construct()
     {
@@ -22,12 +22,10 @@ class Barbershop extends CI_Controller
 
     function detail_barber()
     {
-        $data['barberman'] = $this->M_user->getwhere('data_barberman', ['username_bs' => $this->uri->segment(4)]);
-        $data['barber'] = $this->M_user->getwhere('data_barber', ['username_bs' => $this->uri->segment(4)]);
+        $data['barberman'] = $this->M_user->getwhere('data_barberman', ['username_bs' => $this->uri->segment(3)]);
+        $data['barber'] = $this->M_user->getwhere('data_barber', ['username_bs' => $this->uri->segment(3)]);
         $this->load->view('pelanggan/header');
         $this->load->view('pelanggan/detail_barbershop', $data);
         $this->load->view('pelanggan/footer');
     }
-
-    
 }

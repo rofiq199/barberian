@@ -46,7 +46,7 @@
               <p class="card-text">
                 <?= $a->no_bm; ?>
               </p>
-              <a href="#" class="btn btn-success col-12">Pesan</a>
+              <a href="<?= base_url('pelanggan/pemesanan/index/' . $a->username_bm)  ?>" class="btn btn-success col-12">Pesan</a>
             </div>
           </div>
         <?php } ?>

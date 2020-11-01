@@ -10,9 +10,10 @@ class Pemesanan extends CI_Controller
 
     function index()
     {
-        // $data['customer'] = $this->M_user->getwhere('data_customer', ['username_cs' => $this->session->userdata('username')]);
+        $barber = $this->M_user->getwhere('data_barberman', ['username_bm' => $this->uri->segment(4)]);
+        $data['harga'] = $this->M_user->getwhere('harga_barber', ['username_bs' => $barber[0]->username_bs]);
         $this->load->view('pelanggan/header');
-        $this->load->view('pelanggan/pemesanan');
+        $this->load->view('pelanggan/pemesanan', $data);
         $this->load->view('pelanggan/footer');
     }
 }

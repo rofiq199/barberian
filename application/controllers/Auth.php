@@ -30,7 +30,7 @@ class Auth extends CI_Controller
                 'foto' => $datacustomer[0]['foto_cs']
             );
             $this->session->set_userdata($data_session);
-            redirect(base_url('pelanggan/barbershop'));
+            redirect(base_url('home'));
         } elseif ($cekbarber > 0) {
             $databarber = $this->M_auth->ceklogin('data_barberman', $barber)->result_array();
             $data_session = array(

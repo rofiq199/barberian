@@ -8,7 +8,7 @@
   <title>Inner Page - Delicious Bootstrap Template</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-
+  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/jquery/jquery.min.js"></script>
   <!-- Favicons -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/favicon.png" rel="icon">
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -23,7 +23,7 @@
   <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/owl.carousel/<?= base_url('assets/Delicious/') ?>assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/Delicious/') ?>assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/style.css" rel="stylesheet">

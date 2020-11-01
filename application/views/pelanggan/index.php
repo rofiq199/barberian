@@ -52,7 +52,7 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
-          <li><a href="#contact">Cari Barbershop</a></li>
+          <li><a href="<?= base_url('home/barbershop') ?>">Cari Barbershop</a></li>
           <?php if ($this->session->userdata('username') != '') { ?>
             <li class="book-a-table text-center"><a href="#book-a-table"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" class="img-circle" alt="" srcset=""><?= $this->session->userdata('username'); ?></a></li>
           <?php } else { ?>
