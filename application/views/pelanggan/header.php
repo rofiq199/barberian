@@ -28,7 +28,7 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/style.css" rel="stylesheet">
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/mystyle.css" rel="stylesheet">
-
+<!------ Include the above in your HEAD tag ---------->
   <!-- =======================================================
   * Template Name: Delicious - v2.1.0
   * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
@@ -45,7 +45,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Delicious</span></a></h1>
+        <h1 class="text-light" style="font-family : Satisfy, sans-serrif"><a href="index.html"><span>Delicious</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/') ?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -56,7 +56,7 @@
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="#contact">Cari Barbershop</a></li>
-          <?php if ($this->session->userdata('username') === '') { ?>
+          <?php if ($this->session->userdata('username') == '') { ?>
             <li class="book-a-table text-center"><a href="<?= base_url('auth') ?>">Login</a></li>
           <?php } else { ?>
             <li class="book-a-table text-center"><a href="<?= base_url('auth') ?>"><?= $this->session->userdata('username'); ?></a></li>

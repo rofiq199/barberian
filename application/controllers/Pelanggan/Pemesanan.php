@@ -16,4 +16,16 @@ class Pemesanan extends CI_Controller
         $this->load->view('pelanggan/pemesanan', $data);
         $this->load->view('pelanggan/footer');
     }
+
+    function invoice(){
+        $this->load->view('pelanggan/header');
+        $this->load->view('pelanggan/invoice');
+        $this->load->view('pelanggan/footer');
+    }
+
+    function histori(){
+        $this->load->view('pelanggan/header');
+        $this->load->view('pelanggan/histori');
+        $this->load->view('pelanggan/footer');
+    }
 }

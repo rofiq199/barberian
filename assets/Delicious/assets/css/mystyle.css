@@ -19,8 +19,33 @@ html{
     height: 200px;
 }
 
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
 
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
 
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+
+.histori{
+    background: #ffb03b;
+    color: white;
+    border-radius: 100px;
+    margin-left: auto;
+}
+
+.histori:hover{
+    background:#ffa012;
+    color: white;
+}
 /*Checkboxes styles*/
 input[type="checkbox"] { display: none; }
 
