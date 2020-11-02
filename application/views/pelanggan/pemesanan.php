@@ -23,7 +23,7 @@
     <section id="book-a-table" class="book-a-table">
       <div class="container">
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+        <form action="<?= base_url('pelanggan/pemesanan/invoice') ?>" method="post" role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-5">
               <div class=" form-group">

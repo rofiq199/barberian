@@ -16,6 +16,8 @@
     </section><!-- End Breadcrumbs Section -->
 
     <section class="inner-page">
+        <div class="cart" id="mycart">
+        </div>
         <div class="container">
             <div class="row">
                 <?php foreach ($produk as $a) { ?>
@@ -51,6 +53,7 @@
                 },
                 success: function(data) {
                     console.log(data);
+                    $("#mycart").html(data);
                 },
             });
         });

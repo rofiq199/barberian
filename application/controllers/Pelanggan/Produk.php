@@ -27,7 +27,8 @@ class Produk extends CI_Controller
             'price'   => $harga,
             'name'    => $nama,
         );
-        // $this->cart->insert($data);
-        echo json_encode($data);
+        $this->cart->insert($data);
+        $show = $this->cart->contents();
+        echo json_encode($show);
     }
 }
