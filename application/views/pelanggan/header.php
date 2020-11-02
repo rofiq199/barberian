@@ -8,7 +8,7 @@
   <title>Inner Page - Delicious Bootstrap Template</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-  <script src="<?= base_url('assets/Delicious/') ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <!-- Favicons -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/favicon.png" rel="icon">
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
