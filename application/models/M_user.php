@@ -6,6 +6,10 @@ class M_user extends CI_Model
     {
         return $this->db->get($tabel)->result();
     }
+    function getjoin($tabel, $tabel1, $join)
+    {
+        return $this->db->from($tabel)->join($tabel1, $join)->get()->result();
+    }
     function getwhere($tabel, $where)
     {
         return $this->db->get_where($tabel, $where)->result();
