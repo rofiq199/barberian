@@ -28,7 +28,7 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/style.css" rel="stylesheet">
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/mystyle.css" rel="stylesheet">
-<!------ Include the above in your HEAD tag ---------->
+  <!------ Include the above in your HEAD tag ---------->
   <!-- =======================================================
   * Template Name: Delicious - v2.1.0
   * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
@@ -55,7 +55,7 @@
           <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
-          <li><a href="#contact">Cari Barbershop</a></li>
+          <li><a href="<?= base_url('home/barbershop') ?>">Cari Barbershop</a></li>
           <?php if ($this->session->userdata('username') == '') { ?>
             <li class="book-a-table text-center"><a href="<?= base_url('auth') ?>">Login</a></li>
           <?php } else { ?>

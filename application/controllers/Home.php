@@ -20,10 +20,10 @@ class Home extends CI_Controller
         $this->load->view('pelanggan/footer');
     }
 
-    function detail_barber()
+    function detail_barber($id)
     {
-        $data['barberman'] = $this->M_user->getwhere('data_barberman', ['username_bs' => $this->uri->segment(3)]);
-        $data['barber'] = $this->M_user->getwhere('data_barber', ['username_bs' => $this->uri->segment(3)]);
+        $data['barberman'] = $this->M_user->getwhere('data_barberman', ['username_bs' => $id]);
+        $data['barber'] = $this->M_user->getwhere('data_barber', ['username_bs' => $id]);
         $this->load->view('pelanggan/header');
         $this->load->view('pelanggan/detail_barbershop', $data);
         $this->load->view('pelanggan/footer');
