@@ -17,13 +17,17 @@ class Pemesanan extends CI_Controller
         $this->load->view('pelanggan/footer');
     }
 
-    function invoice(){
+    function invoice()
+    {
+        $data['order'] = $this->input->post();
+        $data['detail'] = $this->M_user->getwhere('harga_barber', $data['order']['harga']);
         $this->load->view('pelanggan/header');
-        $this->load->view('pelanggan/invoice');
+        $this->load->view('pelanggan/invoice', $data);
         $this->load->view('pelanggan/footer');
     }
 
-    function histori(){
+    function histori()
+    {
         $this->load->view('pelanggan/header');
         $this->load->view('pelanggan/histori');
         $this->load->view('pelanggan/footer');

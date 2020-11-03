@@ -46,7 +46,7 @@
             </div>
             <div class="boxes col-md-7">
               <?php foreach ($harga as $a) { ?>
-                <input type="checkbox" class="list" name="harga[]" value="<?= $a->kode_ck ?>" data-harga="<?= $a->harga_ck ?>" id="item<?= $a->kode_ck ?>">
+                <input type="checkbox" class="list" name="kode_ck[]" value="<?= $a->kode_ck ?>" data-harga="<?= $a->harga_ck ?>" id="item<?= $a->kode_ck ?>">
                 <label for="item<?= $a->kode_ck ?>"><?= $a->nama_ck; ?>/<?= $a->harga_ck; ?></label>
               <?php } ?>
             </div>
