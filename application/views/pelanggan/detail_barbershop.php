@@ -26,7 +26,7 @@
             <p class="card-text">Jam operasional <?= date('H:i', strtotime($barber[0]->jam_buka)); ?> s/d <?= date('H:i', strtotime($barber[0]->jam_tutup)); ?></p>
           </div>
         </div>
-        <div class="card border-dark " style="width : 18rem">
+        <div class="card border-dark col-12 col-md-4">
           <div class="card-header text-center"></div>
           <div class="card-body text-dark">
             <h5 class="card-title">Pemesanan</h5>

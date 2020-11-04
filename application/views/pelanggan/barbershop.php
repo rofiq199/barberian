@@ -23,7 +23,7 @@
       <div class="row">
         <?php foreach ($data_barber as $barber) { ?>
           <div class="card col-12 col-md-5">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="<?= base_url('img/').$barber->foto?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?= $barber->nama_bs; ?></h5>
               <p class="card-text"><?= $barber->alamat_bs; ?></p>

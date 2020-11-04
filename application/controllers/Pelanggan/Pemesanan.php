@@ -55,4 +55,10 @@ class Pemesanan extends CI_Controller
         $this->load->view('pelanggan/histori');
         $this->load->view('pelanggan/footer');
     }
+
+    function keranjang(){
+        $this->load->view('pelanggan/header');
+        $this->load->view('pelanggan/keranjang');
+        $this->load->view('pelanggan/footer');
+    }
 }
