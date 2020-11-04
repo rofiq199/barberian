@@ -26,24 +26,24 @@
                 <img src="<?= base_url('assets/login/') ?>assets/images/logo.svg" alt="logo" class="logo">
               </div>
               <p class="login-card-description">Register</p>
-              <form action="">
+              <form action="<?= base_url('auth/proses_register') ?>" method="POST">
                 <div class="row">
                   <div class="form-group col-6">
                     <label for="username" class="sr-only">Username</label>
-                    <input type="text" name="username_cs" id="username" class="form-control" placeholder="Username">
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Username">
                   </div>
                   <div class="form-group col-6">
                     <label for="nama" class="sr-only">Nama lengkap</label>
-                    <input type="text" name="nama_cs" id="nama" class="form-control" placeholder="Nama lengkap">
+                    <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama lengkap">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="email" class="sr-only">Email</label>
-                  <input type="email" name="email_cs" id="email" class="form-control" placeholder="Email address">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
                 </div>
                 <div class="form-group">
                   <label for="no_hp" class="sr-only">Nomor Hp</label>
-                  <input type="text" name="no_cs" id="no_hp" class="form-control" placeholder="Phone Number">
+                  <input type="text" name="no" id="no_hp" class="form-control" placeholder="Phone Number">
                 </div>
                 <div class="form-group mb-4">
                   <label for="password" class="sr-only">Password</label>

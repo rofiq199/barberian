@@ -56,7 +56,7 @@
           <?php if ($this->session->userdata('username') != '') { ?>
             <li class="book-a-table text-center"><a href="#book-a-table"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" style="border-radius: 50%;max-width:30px;" class="img-circle pr-2" alt="" srcset=""><?= $this->session->userdata('username'); ?></a></li>
           <?php } else { ?>
-            <li class="book-a-table text-center"><a href="#book-a-table">Login</a></li>
+            <li class="book-a-table text-center"><a href="<?= base_url('auth') ?>">Login</a></li>
           <?php } ?>
         </ul>
       </nav><!-- .nav-menu -->

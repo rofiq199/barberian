@@ -28,4 +28,10 @@ class Home extends CI_Controller
         $this->load->view('pelanggan/detail_barbershop', $data);
         $this->load->view('pelanggan/footer');
     }
+    function getbarbershop()
+    {
+        $keyword = $this->input->post('barber');
+        $data = $this->M_user->search('data_barber', 'nama_bs', $keyword);
+        echo json_encode($data);
+    }
 }

@@ -27,6 +27,7 @@
           <div class="row">
             <div class="col-md-5">
               <div class=" form-group">
+                <input type="hidden" name="kode_order" value="<?= strtoupper(date('Ymd') . random_string('alnum', 4)); ?>">
                 <input type="text" name="username_cs" class="form-control" value="<?= $this->session->userdata('username') ?>" id="username" placeholder="Your Username">
                 <div class="validate"></div>
               </div>

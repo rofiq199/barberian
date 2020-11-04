@@ -26,6 +26,10 @@
                 <img src="<?= base_url('assets/login/') ?>assets/images/logo.svg" alt="logo" class="logo">
               </div>
               <p class="login-card-description">Sign into your account</p>
+              <?php if ($this->session->flashdata('gagal')) {
+              ?>
+                <p class="text-danger"><?= $this->session->flashdata('gagal'); ?></p>
+              <?php } ?>
               <form action="<?= base_url('Auth') ?>/proses_login" method="POST">
                 <div class="form-group">
                   <label for="email" class="sr-only">Email</label>

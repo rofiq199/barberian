@@ -47,6 +47,9 @@ class Auth extends CI_Controller
             );
             $this->session->set_userdata($data_session);
             redirect(base_url('admin/dashboard'));
+        } else {
+            $this->session->set_flashdata('gagal', 'Username atau Password salah!!!');
+            redirect(base_url('auth'));
         }
     }
     function register()
@@ -68,6 +71,7 @@ class Auth extends CI_Controller
             'password_cs' => $password
         ];
         $this->M_auth->register('data_customer', $data);
+        redirect(base_url('home/'));
     }
     function logout()
     {

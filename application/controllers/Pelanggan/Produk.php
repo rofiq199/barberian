@@ -31,4 +31,10 @@ class Produk extends CI_Controller
         $show = $this->cart->contents();
         echo json_encode($show);
     }
+    function getproduk()
+    {
+        $keyword = $this->input->post('produk');
+        $data = $this->M_user->search('produk', 'nama_produk', $keyword);
+        echo json_encode($data);
+    }
 }
