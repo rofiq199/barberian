@@ -59,6 +59,12 @@
                 success: function(data) {
                     console.log(data);
                     $("#mycart").html(data);
+                    Swal.fire({
+                        icon: "success",
+                        title: "Berhasil Add to cart",
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
                 },
             });
         });

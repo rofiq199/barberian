@@ -13,7 +13,7 @@
   <!-- Favicons -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/favicon.png" rel="icon">
   <link href="<?= base_url('assets/Delicious/') ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">

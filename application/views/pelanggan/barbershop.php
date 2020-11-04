@@ -11,7 +11,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2>Daftar Barbershop</h2>
         <ol>
-          <li><a href="<?= base_url('home')?>">Home</a></li>
+          <li><a href="<?= base_url('home') ?>">Home</a></li>
           <li>barbershop</li>
         </ol>
       </div>
@@ -30,7 +30,7 @@
       <div class="row">
         <?php foreach ($data_barber as $barber) { ?>
           <div class="card col-12 col-md-5">
-            <img src="<?= base_url('img/').$barber->foto?>" class="card-img-top" alt="...">
+            <img src="<?= base_url('img/') . $barber->foto ?>" style="max-height: 12rem;" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?= $barber->nama_bs; ?></h5>
               <p class="card-text"><?= $barber->alamat_bs; ?></p>

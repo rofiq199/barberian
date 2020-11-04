@@ -7,6 +7,7 @@ class Pemesanan extends CI_Controller
         parent::__construct();
         $this->load->model('M_user');
         $this->load->helper('string');
+        $this->load->library('cart');
     }
 
     function index()
@@ -51,14 +52,28 @@ class Pemesanan extends CI_Controller
 
     function histori()
     {
+        $data['pesan'] = $this->M_user->getwhere('pesan', ['username_cs' => $this->session->userdata('username')]);
         $this->load->view('pelanggan/header');
-        $this->load->view('pelanggan/histori');
+        $this->load->view('pelanggan/histori', $data);
         $this->load->view('pelanggan/footer');
     }
 
-    function keranjang(){
+    function keranjang()
+    {
         $this->load->view('pelanggan/header');
         $this->load->view('pelanggan/keranjang');
         $this->load->view('pelanggan/footer');
+    }
+    function update_cart()
+    {
+        $qty = $this->input->post('qty');
+        $row = $this->input->post('row');
+        $update = [
+            'rowid' => $row,
+            'qty' => $qty
+        ];
+        $this->cart->update($update);
+        $data = $this->cart->contents();
+        echo json_encode($data);
     }
 }
