@@ -93,6 +93,7 @@ input[type="checkbox"]:checked + label:before {
 	transform: rotate(45deg);
 }
 
+
 @media (min-width: 992px) {
 	.card {
 		margin: 0 0 20px 60px;

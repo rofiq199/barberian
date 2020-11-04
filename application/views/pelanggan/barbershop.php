@@ -1,3 +1,7 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <main id="main">
 
   <!-- ======= Breadcrumbs Section ======= -->
@@ -5,10 +9,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Inner Page</h2>
+        <h2>Daftar Barbershop</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Inner Page</li>
+          <li><a href="<?= base_url('home')?>">Home</a></li>
+          <li>barbershop</li>
         </ol>
       </div>
 
@@ -17,8 +21,11 @@
 
   <section class="inner-page">
     <div class="container">
-      <div class="md-form p-5">
-        <input class="form-control" type="text" id="search" placeholder="Cari barbershop" aria-label="Search">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" id="search" type="text" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
       </div>
       <div class="row">
         <?php foreach ($data_barber as $barber) { ?>

@@ -5,7 +5,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Inner Page</h2>
+        <h2><?= $barber[0]->nama_bs?></h2>
         <ol>
           <li><a href="index.html">Home</a></li>
           <li>Inner Page</li>
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="card bg-dark text-white col-12 col-md-7">
-          <img src="..." class="card-img" alt="...">
+          <img src="<?= base_url('img/').$barber[0]->foto_bs?>" class="card-img" alt="...">
           <div class="card-img-overlay">
             <h5 class="card-title"><?= $barber[0]->nama_bs; ?></h5>
             <p class="card-text">Alamat : <?= $barber[0]->alamat_bs; ?></p>
