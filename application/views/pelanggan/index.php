@@ -54,7 +54,18 @@
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="<?= base_url('home/barbershop') ?>">Cari Barbershop</a></li>
           <?php if ($this->session->userdata('username') != '') { ?>
-            <li class="book-a-table text-center"><a href="#book-a-table"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" style="border-radius: 50%;max-width:30px;" class="img-circle pr-2" alt="" srcset=""><?= $this->session->userdata('username'); ?></a></li>
+              <li class="text-center"><div class="dropdown"><a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#" id="dropdown"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" style="border-radius: 50%;max-width:30px;" class="img-circle pr-2" alt="" srcset=""><?= $this->session->userdata('username'); ?></a>
+              <div class="dropdown-menu" aria-labelledby="dropdown">
+                <a class="dropdown-item text-warning" href="#">Profil</a>
+                <a class="dropdown-item text-warning" href="#">Keranjang</a>
+                <a class="dropdown-item text-warning" href="#">Riwayat Pembelian</a>
+                <a class="dropdown-item text-warning" href="#">Riwayat Pemesanan</a>
+                <a class="dropdown-item text-warning" href="#">Logout</a>
+              </div>
+          </div>
+            </li>
+
+              
           <?php } else { ?>
             <li class="book-a-table text-center"><a href="<?= base_url('auth') ?>">Login</a></li>
           <?php } ?>
