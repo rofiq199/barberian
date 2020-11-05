@@ -44,7 +44,7 @@
       <div class="logo mr-auto">
         <h1 class="text-light"><a href="index.html"><span>Barberian</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/') ?>assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.html"><img src="<?= base_url('assets/Delicious/') ?>assets/img/logo.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -182,7 +182,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/bald.png" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/bald.png" alt="" class="img-fluid">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/bald.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
@@ -190,55 +190,55 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/army.png" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/army.png" alt="" class="img-fluid">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/army.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/fading.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/fading.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/messy.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/messy.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/midfade.jpg" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/midfade.jpg" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/mohawk.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/mohawk.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/pompadour.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/pompadour.png" alt="" class="img-fluid" style="max-width : 500px; max-height: 400px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="<?= base_url('assets/Delicious/') ?>assets/img/gallery/quiff.png" class="venobox" data-gall="gallery-item">
+                <img src="<?= base_url('assets/Delicious/') ?>assets/img/gallery/quiff.png" alt="" class="img-fluid" style="max-width : 400px; max-height: 400px;">
               </a>
             </div>
           </div>

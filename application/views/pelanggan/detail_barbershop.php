@@ -18,8 +18,8 @@
   <section class="inner-page">
     <div class="container">
       <div class="row">
-        <div class="card bg-dark text-white col-12 col-md-7">
-          <img src="<?= base_url('img/').$barber[0]->foto_bs?>" class="card-img" alt="...">
+        <div class="card bg-dark text-white col-12 col-md-6">
+          <img src="<?= base_url('img/').$barber[0]->foto?>" class="card-img" style="max-width : auto; max-height: 400px; filter: blur(1px); -webkit-filter: blur(1px);" alt="...">
           <div class="card-img-overlay">
             <h5 class="card-title"><?= $barber[0]->nama_bs; ?></h5>
             <p class="card-text">Alamat : <?= $barber[0]->alamat_bs; ?></p>
