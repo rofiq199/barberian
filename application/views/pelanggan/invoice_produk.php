@@ -9,16 +9,15 @@
 				<div class="col-xs-12 col-md-12">
 					<div class="invoice-title">
 						<h2>Invoice</h2>
-						<h3 class="pull-right"><?= $pesan[0]->kode_pesan; ?></h3>
+						<h3 class="pull-right"><?= $penjualan[0]->kode_jual; ?></h3>
 					</div>
 					<hr>
 					<div class="row">
 						<div class="col-xs-6">
 							<address>
-								<strong>Billed To:</strong><br>
-								<?= $pesan[0]->nama_cs; ?><br>
-								<?= $pesan[0]->alamat_pesan; ?><br>
-								<?= $pesan[0]->tanggal_pesan; ?>
+								<strong>Keteranagan:</strong><br>
+								<?= $penjualan[0]->nama_cs; ?><br>
+								<?= $penjualan[0]->tanggal_jual; ?>
 							</address>
 						</div>
 					</div>
@@ -35,8 +34,9 @@
 											<thead>
 												<tr>
 													<td><strong>No</strong></td>
-													<td class="text-center"><strong>Service</strong></td>
-													<td class="text-right"><strong>Totals</strong></td>
+													<td class="text-center"><strong>Produk</strong></td>
+													<td class="text-center"><strong>Jumlah</strong></td>
+													<td class="text-right"><strong>Total</strong></td>
 												</tr>
 											</thead>
 											<tbody>
@@ -45,16 +45,18 @@
 												foreach ($detail as $index => $a) { ?>
 													<tr>
 														<td><?= $index + 1; ?></td>
-														<td class="text-center"><?= $a->nama_ck; ?></td>
-														<td class="text-right"><?= 'Rp. ' . number_format($a->harga_ck, 0, ",", "."); ?></td>
+														<td class="text-center"><?= $a->nama_produk; ?></td>
+														<td class="text-center"><?= $a->jumlah; ?></td>
+														<td class="text-right"><?= 'Rp. ' . number_format($a->harga_produk, 0, ",", "."); ?></td>
 													</tr>
 												<?php
-													$total += $a->harga_ck;
+													$total += $a->harga_produk;
 												} ?>
 												<tr>
-													<td class="no-line"></td>
-													<td class="no-line text-right"><strong>Total</strong></td>
-													<td class="no-line text-right"><?= 'Rp. ' . number_format($total, 0, ",", "."); ?></td>
+													<td class=""></td>
+													<td class=""></td>
+													<td class=" text-right"><strong>Total</strong></td>
+													<td class=" text-right"><?= 'Rp. ' . number_format($total, 0, ",", "."); ?></td>
 												</tr>
 											</tbody>
 										</table>

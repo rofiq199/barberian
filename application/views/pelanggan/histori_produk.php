@@ -17,13 +17,13 @@
 
   <section class="inner-page">
     <div class="container">
-      <?php foreach ($pesan as $a) { ?>
+      <?php foreach ($penjualan as $a) { ?>
         <div class="card">
-          <h5 class="card-header" style="font-family : Poppins"><?= $a->kode_pesan; ?></h5>
+          <h5 class="card-header" style="font-family : Poppins"><?= $a->kode_jual; ?></h5>
           <div class="card-body">
-            <h5 class="card-title" style="font-family : Poppins">Tanggal : <?= $a->tanggal_pesan; ?></h5>
-            <p class="card-text">Alamat : <?= $a->alamat_pesan; ?></p>
-            <a href="#" class="btn histori">Go somewhere</a>
+            <h5 class="card-title" style="font-family : Poppins">Tanggal : <?= $a->tanggal_jual; ?></h5>
+            <p class="card-text">Total : <?= $a->total_harga; ?></p>
+            <a href="<?= base_url('pelanggan/pemesanan/invoice_produk/' . $a->kode_jual) ?>" class="btn histori">Invoice</a>
           </div>
         </div>
       <?php } ?>

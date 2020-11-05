@@ -1,10 +1,7 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <main id="main">
-
 	<!-- ======= Breadcrumbs Section ======= -->
 	<section class="breadcrumbs">
 		<div class="container">
@@ -26,74 +23,33 @@
 				<div class="col-12">
 					<div class="panel panel-info">
 						<div class="panel-body">
-							<div class="cart" id="cart">
-								<?php foreach ($this->cart->contents() as $a) { ?>
-									<div class="row">
-										<div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-										</div>
-										<div class="col-xs-4">
-											<h4 class="product-name"><strong><?= $a['name']; ?></strong></h4>
-										</div>
-										<div class="col-xs-6">
-											<div class="col-xs-6 text-right">
-												<h6><strong><?= $a['price']; ?> <span class="text-muted">x</span></strong></h6>
-											</div>
-											<div class="col-xs-4">
-												<input type="text" class="form-control input-sm" id="qty" data-row="<?= $a['rowid'] ?>" value="<?= $a['qty'] ?>">
-											</div>
-											<div class="col-xs-2">
-												<button type="button" class="btn btn-link btn-xs">
-													<span class="glyphicon glyphicon-trash"> </span>
-												</button>
-											</div>
-										</div>
-									</div>
-									<hr>
-								<?php } ?>
-							</div>
-							<div class="row">
-								<div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-								</div>
-								<div class="col-xs-4">
-									<h4 class="product-name"><strong>Product name</strong></h4>
-									<h4><small>Product description</small></h4>
-								</div>
-								<div class="col-xs-6">
-									<div class="col-xs-6 text-right">
-										<h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-									</div>
-									<div class="col-xs-4">
-										<input type="text" class="form-control input-sm" value="1">
-									</div>
-									<div class="col-xs-2">
-										<button type="button" class="btn btn-link btn-xs">
-											<span class="glyphicon glyphicon-trash"> </span>
-										</button>
-									</div>
-								</div>
+							<div id="cart">
+
 							</div>
 						</div>
-						<div class="panel-footer">
-							<div class="row text-center">
-								<div class="col-xs-9">
-									<h4 class="text-right">Total <strong>$50.00</strong></h4>
-								</div>
-								<div class="col-xs-3">
-									<button type="button" class="btn btn-success btn-block">
-										Checkout
-									</button>
-								</div>
+					</div>
+					<div class="panel-footer">
+						<div class="row text-center">
+							<div class="col-xs-9">
+								<h4 class="text-right">Total <strong id="total"></strong></h4>
+							</div>
+							<div class="col-xs-3">
+								<a href="<?= base_url('pelanggan/pemesanan/proses_beli') ?>" type="button" class="btn btn-success btn-block">
+									Checkout
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
 </main><!-- End #main -->
 <script>
 	$(document).ready(function() {
-		$('.row').on('blur', '#qty', function() {
+		$('#cart').load("<?php echo base_url(); ?>pelanggan/pemesanan/load_cart");
+		$('.row').on('blur', "#qty", function() {
 			var row = $(this).data('row');
 			var qty = $(this).val();
 			$.ajax({
@@ -106,31 +62,28 @@
 				},
 				success: function(data) {
 					console.log(data);
-					// $('.row').empty();
-					for (i = 0; i < data.length; i++) {
-						console.log(data[i]['name']);
-						// $('#cart').append('<div class="row">' +
-						// 	'<div class="col-xs-2">' + '<img class="img-responsive" src="http://placehold.it/100x70">' +
-						// 	'</div>' +
-						// 	'<div class="col-xs-4">' +
-						// 	'<h4 class="product-name"><strong>' + data[i]['name'] + '</strong></h4>' +
-						// 	'</div>' +
-						// 	'<div class="col-xs-6">' +
-						// 	'<div class="col-xs-6 text-right">' +
-						// 	'<h6><strong>' + data[i]['price'] + ' <span class="text-muted">x</span></strong></h6>' +
-						// 	'</div>' +
-						// 	'<div class="col-xs-4">' +
-						// 	'<input type="text" class="form-control input-sm" id="qty" data-row="' + data[i]['rowid'] + '" value="' + data[i]['qty	'] + '">' +
-						// 	'</div>' +
-						// 	'<div class = "col-xs-2" >' +
-						// 	'<button type = "button" class = "btn btn-link btn-xs" >' +
-						// 	'<span class = "glyphicon glyphicon-trash" > </span> </button>' +
-						// 	'</div> </div> </div> <hr>'
-
-						// );
-					}
+					$('#cart').html(data);
 				},
 			});
 		});
+		$('.row').on('click', '#hapus', function() {
+			var row = $(this).data("row"); //mengambil row_id dari artibut id
+			$.ajax({
+				url: "<?= base_url(); ?>/pelanggan/pemesanan/hapus_cart",
+				method: "POST",
+				data: {
+					row: row
+				},
+				success: function(data) {
+					$('#cart').html(data);
+				}
+			});
+		})
 	});
+	var total = 0;
+	$('#qty').each(function() {
+		var subtotal = $(this).data('subtotal');
+		console.log(subtotal);
+	});
+	$('#total').append();
 </script>
