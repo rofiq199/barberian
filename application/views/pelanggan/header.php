@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/style.css" rel="stylesheet">
   <link href="<?= base_url('assets/Delicious/') ?>assets/css/mystyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url('assets/MDB-Free_4.19.1/')?>css/mdb.min.css">
   <!------ Include the above in your HEAD tag ---------->
   <!-- =======================================================
   * Template Name: Delicious - v2.1.0
@@ -53,17 +54,17 @@
 
       <nav class="nav-menu d-none d-lg-block fixed">
         <ul>
-          <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
-          <li><a href="#why-us">Fitur Kami</a></li>
-          <li><a href="#gallery">Katalog</a></li>
+          <li><a href="<?= base_url('home') ?>">Home</a></li>
+          <li><a href="<?= base_url('home') ?>">Fitur Kami</a></li>
+          <li><a href="<?= base_url('home') ?>">Katalog</a></li>
           <li><a href="<?= base_url('home/barbershop') ?>">Cari Barbershop</a></li>
           <?php if ($this->session->userdata('username') != '') { ?>
               <li class="text-center"><div class="dropdown"><a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#" id="dropdown"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" style="border-radius: 50%;max-width:30px;" class="img-circle pr-2" alt="" srcset=""><?= $this->session->userdata('username'); ?></a>
               <div class="dropdown-menu" aria-labelledby="dropdown">
-                <a class="dropdown-item text-warning" href="#">Profil</a>
+                <a class="dropdown-item text-warning" href="<?= base_url('pelanggan/profil')?>">Profil</a>
                 <a class="dropdown-item text-warning" href="#">Keranjang</a>
                 <a class="dropdown-item text-warning" href="#">Riwayat Pembelian</a>
-                <a class="dropdown-item text-warning" href="#">Riwayat Pemesanan</a>
+                <a class="dropdown-item text-warning" href="<?= base_url('pelanggan/pemesanan/histori')?>">Riwayat Pemesanan</a>
                 <a class="dropdown-item text-warning" href="#">Logout</a>
               </div>
           </div>

@@ -1,7 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <main id="main">
 
   <!-- ======= Breadcrumbs Section ======= -->
@@ -21,12 +17,9 @@
 
   <section class="inner-page">
     <div class="container">
-      <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-          <input class="search_input" id="search" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-      </div>
+    <div class="md-form active-cyan-2 mb-3">
+      <input class="form-control" type="text" id="search" placeholder="Search" aria-label="Search">
+    </div>
       <div class="row">
         <?php foreach ($data_barber as $barber) { ?>
           <div class="card col-12 col-md-5">

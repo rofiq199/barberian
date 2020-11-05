@@ -49,14 +49,14 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="<?= base_url('home')?>">Home</a></li>
           <li><a href="#why-us">Fitur Kami</a></li>
           <li><a href="#gallery">Katalog</a></li>
           <li><a href="<?= base_url('home/barbershop') ?>">Cari Barbershop</a></li>
           <?php if ($this->session->userdata('username') != '') { ?>
               <li class="text-center"><div class="dropdown"><a class=" btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#" id="dropdown"> <img src="<?= base_url('img/') . $this->session->userdata('foto') ?>" style="border-radius: 50%;max-width:30px;" class="img-circle pr-2" alt="" srcset=""><?= $this->session->userdata('username'); ?></a>
               <div class="dropdown-menu" aria-labelledby="dropdown">
-                <a class="dropdown-item text-warning" href="#">Profil</a>
+                <a class="dropdown-item text-warning" href="<?= base_url('pelanggan/profil')?>">Profil</a>
                 <a class="dropdown-item text-warning" href="#">Keranjang</a>
                 <a class="dropdown-item text-warning" href="#">Riwayat Pembelian</a>
                 <a class="dropdown-item text-warning" href="#">Riwayat Pemesanan</a>

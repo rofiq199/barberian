@@ -36,6 +36,7 @@
 
 <!-- Template Main JS File -->
 <script src="<?= base_url('assets/Delicious/') ?>assets/js/main.js"></script>
+<script type="text/javascript" src="<?= base_url('assets/MDB-Free_4.19.1/')?>js/mdb.min.js"></script>
 
 </body>
 
