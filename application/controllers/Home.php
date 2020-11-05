@@ -34,4 +34,9 @@ class Home extends CI_Controller
         $data = $this->M_user->search('data_barber', 'nama_bs', $keyword);
         echo json_encode($data);
     }
+
+    function cobacoba(){
+        $data['barberman'] = $this->M_user->getData('data_barberman');
+        $this->load->view('latihan', $data);
+    }
 }
